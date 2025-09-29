@@ -5,6 +5,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 main {
@@ -48,16 +49,17 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 100%;        
+    max-width: 900px;   
     margin: 0 auto;
-    padding: 40px 0;
-    gap: 20px; /* espaço entre os ícones */
+    padding: 20px 10px; 
+    gap: 20px;          
 }
 
 nav a img {
-    width: 150px;       /* tamanho padrão */
-    max-width: 30vw;    /* nunca passa de 30% da tela */
-    height: auto;       /* mantém proporção */
+    width: 150px;       
+    max-width: 30vw;    
+    height: auto;       
     transition: transform 0.2s;
 }
 
@@ -82,25 +84,24 @@ footer {
     color: white;
 }
 
-/* -------- RESPONSIVIDADE -------- */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column; /* empilha os ícones */
+        flex-direction: column; 
         justify-content: center;
         gap: 25px;
     }
 
     nav a img {
-        width: 120px; /* reduz imagens no celular */
-        max-width: 60vw;
+        width: 120px;       
+        max-width: 60vw;    
     }
 
     header {
-        font-size: 1.2em; /* ajusta título */
+        font-size: 1.2em;   
         padding: 15px 5px;
     }
 
     .paragrafo {
-        font-size: 0.8em; /* texto mais legível */
+        font-size: 0.8em;   
     }
 }
